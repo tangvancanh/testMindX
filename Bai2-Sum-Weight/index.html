@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài test mindX</title>
+</head>
+
+<body>
+    <script>
+        let weight = [60, 40, 55, 75, 64];
+
+        function alternatingSums(weight) {
+            let weight1 = 0;
+            let weight2 = 0;
+            for (let i = 0; i < weight.length; i++) {
+                if (i % 2 == 0) {
+                    weight1 += weight[i];
+                } else {
+                    weight2 += weight[i];
+                }
+            }
+            let sum = [weight1, weight2];
+            return sum;
+        }
+
+        document.write("Mảng INPUT : " + weight.join(" - "));
+        document.write("<br/><br/>");
+        document.write("Mảng OUTPUT : " + alternatingSums(weight).join(" - "));
+    </script>
+</body>
+
+</html>

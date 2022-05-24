@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bài test mindX</title>
+</head>
+
+<body>
+	<script>
+		const array = ["BINH", "HUNG", "PHUOC", "CAO", "KHANH"];
+
+		function allLongestStrings(array) {
+			let max = array[0].length;
+			const maxArray = [];
+			for (i = 0; i < array.length; i++) {
+				if (array[i].length > max) {
+					max = array[i].length;
+				}
+			}
+			for (i = 0; i < array.length; i++) {
+				if (array[i].length == max) {
+					maxArray.push(array[i]);
+				}
+			}
+			return maxArray;
+		}
+
+		document.write("Mảng INPUT : " + array.join(" - "));
+		document.write("<br/><br/>");
+		document.write("Mảng OUTPUT : " + allLongestStrings(array).join(" - "));
+	</script>
+</body>
+
+</html>
